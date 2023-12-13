@@ -54,14 +54,14 @@ include 'conn.php';
                 </div>
             </div>
             <div class="box">
-            <div style="margin:-72px; color: white; font-weight: bolder; background-color: red; width: 35px; text-align:center; border-radius: 30%; font-size: 30px;"><?php if($r3 != 0){echo $r3.'+';} else{echo '';}?></div>
+            <div class="notification"><?php if($r3 != 0){echo $r3.'+';} else{echo '';}?></div>
                 <i class="fa-solid fa-wifi"></i>
                 <div class="data">
                 <p><a href="factories.php">نقطة مزودات الانترنت</a></p>
                 </div>
             </div>
             <div class="box">
-            <div style="margin:-100px; color: white; font-weight: bolder; background-color: red; width: 35px; text-align:center; border-radius: 30%; font-size: 30px;"><?php if($r4 != 0){echo $r4.'+';} else{echo '';}?></div>
+            <div class="notification"><?php if($r4 != 0){echo $r4.'+';} else{echo '';}?></div>
             <i class="fa-solid fa-chart-simple"></i>
                 <div class="data">
                     <p><a href="allprices.php">لائحة التساعير</a></p>

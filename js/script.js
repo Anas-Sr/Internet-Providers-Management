@@ -35,3 +35,22 @@ function optionhide() {
     });
   });
 })();
+
+function buttonClickAnchor(event) {
+  event
+    .currentTarget
+    .querySelector('a')
+    .click();
+}
+
+Array.from(
+  document.querySelectorAll("button, .box")
+).forEach(button => 
+  button.addEventListener("click", buttonClickAnchor)
+);
+
+Array.from(
+  document.querySelectorAll(".changeable-input")
+).forEach(input =>
+  input.addEventListener("change", _e => input.style.backgroundColor = "chartreuse")
+);

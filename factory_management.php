@@ -124,7 +124,7 @@ $id = $_GET['id'];
                                 <td style="display: none;"><input type="text" name="pid[]" value="<?php echo $p_id;?>"></td>
                                 <td style="display: none;"><input type="text" name="id[]" value="<?php echo $id;?>"></td>
                                 <td data-label="اسم المزود/الشركة"><a href="factoryprofile.php?id=<?php echo $id; ?>" style="text-decoration: none; color: black; font-weight: bolder;"><?php echo $name; ?></a></td>
-                                <td data-label="النسبة الموضوعة"><input type="text" name="avg[]" value="<?php echo $argv; ?>" style="width:100%; padding: 7px; font-size: 20px; text-align: center; font-weight: bolder;" ></td>
+                                <td data-label="النسبة الموضوعة"><input class="changeable-input" type="text" name="avg[]" value="<?php echo $argv; ?>" style="width:100%; padding: 7px; font-size: 20px; text-align: center; font-weight: bolder;" ></td>
                             </tr>
                 <?php
                         }
@@ -155,9 +155,8 @@ $id = $_GET['id'];
     cursor: pointer;
     margin-top: 15px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);">
-        </form>
-        <button style="
-            width: 100%;
+    <button style="
+        width: 100%;
     text-decoration: none;
     border-radius: 8px;
     line-height: 35px;
@@ -175,10 +174,13 @@ $id = $_GET['id'];
     cursor: pointer;
     margin-top: 15px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
-        ">
+        "
+        type="button"
+    >
             <a href="dashboard.php" style="color: white; text-decoration: none;">
                 العودة للوحة التحكم <i class="fa-solid fa-arrow-right-from-bracket" style="margin-right: 15px;"></i></a>
         </button>
+        </form>
     </div>
     <script src="js/script.js">
     </script>

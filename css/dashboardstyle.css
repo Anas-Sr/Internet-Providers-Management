@@ -158,6 +158,7 @@ body.menu-shown .title-info {
     gap: 50px;
 }
 .data-info .box{
+    position: relative;
     margin-top: 70px;
     margin-right: 10px;
     background-color: white;
@@ -171,6 +172,23 @@ body.menu-shown .title-info {
     justify-content: space-around;
     box-shadow: 2px 2px 2px #06283D;
     /* transition: transform 500ms, color 500ms, background-color 500ms; */
+}
+.data-info .box .notification {
+    --size: 20px;
+
+    width: var(--size);
+    height: var(--size);
+    padding: 10px;
+    border-radius: 100%;
+    background-color: red;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    position: absolute;
+    font-weight: bold;
+    color: white;
+    top: calc(-1 * var(--size) / 2);
+    right: calc(-1 * var(--size) / 2);
 }
 .data-info .box:hover{
     background: whitesmoke;

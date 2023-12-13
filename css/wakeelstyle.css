@@ -11,12 +11,14 @@ body{
     margin: 0;
 }
 .table-container{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     border-radius: 8px;
     min-width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    width: 100%;
 }
 .heading{
     font-size: 40px;
