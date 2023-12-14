@@ -58,6 +58,17 @@ session_start();
         <?php
         include 'searchaccount.php';
         ?>
+        <?php 
+            include 'conn.php';
+            $sql5 = "SELECT sum(real_cash) FROM allaccount WHERE kind = 0";
+            $query5 = mysqli_query($conn,$sql5);
+            while($res5 = mysqli_fetch_assoc($query5)){
+                $r5 =  $res5['sum(real_cash)'];
+            echo "<div style='padding:6px; font-size :25px; font-weight:bolder;'>";
+            echo "مجموع الأرصدة:". "&ensp;" .$r5 ;
+            echo"</div>";
+            }
+        ?>
         <table class="table">
             <thead>
                 <tr>
