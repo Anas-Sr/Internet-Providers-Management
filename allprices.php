@@ -23,7 +23,6 @@ include 'conn.php';
         <form action="allprices.php" method="POST">
             <input type="search" name="name" placeholder=" ابحث عن أي تسعيرة" style="    
     width: 350px;
-    left: 250px;
     line-height: 35px;
     display: inline-block;
     background-color: white;
@@ -35,6 +34,7 @@ include 'conn.php';
     border-radius: 8px;
     font-size: 14px;
     opacity: 1;
+    align-items:center;
     margin-bottom: 15px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);">
             <input type="submit" name="search" class="bt" value="🔎بحث" style="
@@ -59,7 +59,7 @@ include 'conn.php';
         <?php
         include 'pricesearch.php';
         ?>
-        <table class="table" id="table" style="width: 100%;">
+        <table class="table" id="table" style="width: 85%;">
             <thead>
                 <tr>
                     <th>id</th>

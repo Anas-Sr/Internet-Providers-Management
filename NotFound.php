@@ -21,7 +21,6 @@ session_start();
     font-weight: bolder;
     color: white;
     text-align: center;
-    margin-left: 40%;
     vertical-align: middle;
     user-select: none;
     border: 2px solid none;

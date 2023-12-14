@@ -96,7 +96,7 @@ $id = $_GET['id'];
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);">
         </form>
         <form action="edit-avarage.php" method="POST">
-        <table align="center" class="table">
+        <table align="center" class="table" style="width: 100%;">
             <thead>
                 <tr>
                     <th style="display: none;">رقم التسعيرة</th>

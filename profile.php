@@ -48,6 +48,14 @@ while ($result = mysqli_fetch_assoc($query)) {
                         <input class="phone-field" type="text" name="tel" value="<?php echo "0" . $result['a_phone']; ?>" required>
                     </div>
                     <div class="input-box">
+                        <span class="details">الرصيد الحالي</span>
+                        <input  type="text" name="now" value="<?php echo $result['real_cash']; ?>" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">الرصيد المدين</span>
+                        <input  type="text" name="past" value="<?php echo $result['image_cash']; ?>" required>
+                    </div>
+                    <div class="input-box">
                         <span class="details">التسعيرة المحددة</span>
                         <select name="kind">
                         <?php

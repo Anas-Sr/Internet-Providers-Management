@@ -8,13 +8,15 @@ $email = $_POST['email'];
 $pass = $_POST['pass'];
 $address = $_POST['address'];
 $tel = $_POST['tel'];
+$now = $_POST['now'];
+$past = $_POST['past'];
 $kind = $_POST['kind'];
 
 if (!empty($id) && !empty($name) && !empty($email) && !empty($pass) && !empty($address) && !empty($tel)) {
     $success = true;
     try {
         $sql = "UPDATE allaccount SET fullname='$name', a_email='$email', a_password='$pass'
-            ,a_address='$address', a_phone='$tel', deff_id='$kind' WHERE id='$id'";
+            ,a_address='$address', a_phone='$tel', real_cash='$now' ,image_cash='$past', deff_id='$kind' WHERE id='$id'";
         $query = mysqli_query($conn, $sql);
     } catch (PDOException $e) {
         $success = false;

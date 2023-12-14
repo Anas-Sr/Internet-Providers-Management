@@ -95,7 +95,6 @@ include 'conn.php';
     margin-bottom: 8px;
     cursor: pointer;
     margin-top: 15px;
-    margin-right: 85px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
         "><a href="addwakeel.php" style="color: white; text-decoration: none;" onclick="btndisplay()">
                 اضافة وكيل جديد <i class="fa fa-plus"></i></a>
@@ -118,7 +117,6 @@ include 'conn.php';
     margin-bottom: 8px;
     cursor: pointer;
     margin-top: 15px;
-    margin-right: 85px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
         ">
             <a href="dashboard.php" style="color: white; text-decoration: none;">
