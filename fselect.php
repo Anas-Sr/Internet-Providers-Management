@@ -12,7 +12,6 @@ if (mysqli_num_rows($query) > 0) {
                     <tr>
                         <td data-label="id"><?php echo $result['man_id']; ?></td>
                         <td data-label="اسم المزود"><a href="factoryprofile.php?id=<?php echo $result['man_id']; ?>" style="text-decoration: none; color: black; font-weight: bolder;"><?php echo $result['man_name']; ?></a></td>
-                        <td data-label="الايميل | البريد الالكتروني"><?php echo $result['man_email']; ?></td>
                         <td data-label="معلومات اضافية"><?php echo $result['man_information']; ?></td>
                         <td data-label="العمليات | الحالة">
                             <?php
@@ -20,6 +19,13 @@ if (mysqli_num_rows($query) > 0) {
                                 echo "<a href='fupdate.php?id=$id' class='btn'>" . "مفعل" . "</a>";
                             } else {
                                 echo "<a href='fdown.php?id=$id' class='btn' style='background-color:red; color:white;'>غير مفعل</a>";
+                            }
+                            ?>
+                            <?php
+                            if ($result['real_status'] == 1) {
+                                echo "<a href='cash_update.php?id=$id' class='btn'>" . "آلي" . "</a>";
+                            } else {
+                                echo "<a href='cash_down.php?id=$id' class='btn' style='background-color:red; color:white;'>يدوي</a>";
                             }
                             ?>
                         </td>
