@@ -36,7 +36,7 @@ if (isset($_POST['search']) && !empty($_POST['name'])) {
         <?php
         }
     } else {
-        echo "<div style='margin-right: 39%; padding: 8px; font-size: 20px; font-weight: bolder;'>" . "لا يوجد شخص أو حساب بهذا الاسم" . "</div>";
+        echo "<div style='text-align:center; padding: 8px; font-size: 20px; font-weight: bolder;'>" . "لا يوجد شخص أو حساب بهذا الاسم" . "</div>";
     }
 }
         ?>

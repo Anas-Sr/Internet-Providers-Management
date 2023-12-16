@@ -23,6 +23,7 @@ include 'conn.php';
         <form action="wakeel.php" method="POST">
             <input type="search" name="name" placeholder=" ابحث عن أي وكيل" style="    
     width: 350px;
+    margin-right:40px;
     line-height: 35px;
     display: inline-block;
     background-color: white;
@@ -37,7 +38,8 @@ include 'conn.php';
     margin-bottom: 15px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);">
             <input type="submit" name="search" class="bt" value="🔎بحث" style="
-    width: 130px;
+    width: 190px;
+    margin-right:45px;
     text-decoration: none;
     border-radius: 8px;
     line-height: 35px;
@@ -64,10 +66,10 @@ include 'conn.php';
             $query5 = mysqli_query($conn,$sql5);
             while($res5 = mysqli_fetch_assoc($query5)){
                 $r5 =  $res5['sum(real_cash)'];
-            echo "<div style='padding:6px; font-size :25px; font-weight:bolder;'>";
+            echo "<div style='padding:10px; font-size :25px; font-weight:bolder;'>";
             echo "مجموع الأرصدة:". "&ensp;" .$r5 ;
             echo"</div>";
-            }
+        }
         ?>
         <table class="table" id="table">
             <thead>

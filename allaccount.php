@@ -23,6 +23,7 @@ session_start();
         <form action="allaccount.php" method="POST">
             <input type="search" name="name" placeholder=" ابحث عن أي حساب" style="    
     width: 350px;
+    margin-right:40px;
     line-height: 35px;
     display: inline-block;
     background-color: white;
@@ -37,7 +38,8 @@ session_start();
     margin-bottom: 15px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);">
             <input type="submit" name="search" class="bt" value="🔎بحث" style="
-    width: 130px;
+    width: 190px;
+    margin-right:45px;
     text-decoration: none;
     border-radius: 8px;
     line-height: 35px;
@@ -89,7 +91,7 @@ session_start();
             </tbody>
         </table>
         <button style="
-            width: 170px;
+    width: 170px;
     text-decoration: none;
     border-radius: 8px;
     line-height: 35px;
@@ -106,13 +108,12 @@ session_start();
     margin-bottom: 8px;
     cursor: pointer;
     margin-top: 15px;
-    margin-right: 85px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
         "><a href="addaccount.php" style="color: white; text-decoration: none;">
                 اضافة حساب جديد <i class="fa fa-plus"></i></a>
         </button>
         <button style="
-            width: 170px;
+    width: 170px;
     text-decoration: none;
     border-radius: 8px;
     line-height: 35px;
@@ -129,7 +130,6 @@ session_start();
     margin-bottom: 8px;
     cursor: pointer;
     margin-top: 15px;
-    margin-right: 85px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
         ">
             <a href="dashboard.php" style="color: white; text-decoration: none;">
