@@ -9,6 +9,8 @@ if (isset($_POST['search']) && !empty($_POST['name'])) {
     }
     if (mysqli_num_rows($query) > 0) {
         while ($result = mysqli_fetch_assoc($query)) {
+            $id = $result['id'];
+            $deff = $result['deff_id'];
 ?>
             <table class="table" id="table" style="margin-bottom: 50px;">
                 <thead>
@@ -19,19 +21,39 @@ if (isset($_POST['search']) && !empty($_POST['name'])) {
                         <th>نوع الحساب</th>
                         <th>الرصيد الحالي</th>
                         <th>الرصيد المدين</th>
+                        <th>التسعيرة المحددة</th>
                         <th>العمليات | الحالة</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td data-label="id"><?php echo $result['id']; ?></td>
-                        <td data-label="الاسم الكامل"><a href="profile.php?id=<?php echo $result['id']; ?>" style="text-decoration: none; color: black; font-weight: bolder;"><?php echo $result['fullname']; ?></a></td>
-                        <td data-label="الايميل | البريد الالكتروني"><?php echo $result['a_email']; ?></td>
-                        <td data-label="نوع الحساب"><?php echo "وكيل معتمد"; ?></td>
-                        <td data-label="الرصيد الحالي"><?php echo $result['real_cash']; ?></td>
-                        <td data-label="الرصيد المدين"><?php echo $result['image_cash']; ?></td>
-                        <td data-label="العمليات | الحالة"><a href="#" class="btn">aaaaaa</a></td>
-                    </tr>
+        <tr>
+            <td data-label="id"><?php echo $result['id']; ?></td>
+            <td data-label="الاسم الكامل"><a href="profile.php?id=<?php echo $result['id']; ?>" style="text-decoration: none; color: black; font-weight: bolder;"><?php echo $result['fullname']; ?></a></td>
+            <td data-label="البريد الالكتروني"><?php echo $result['a_email']; ?></td>
+            <td data-label="نوع الحساب"><?php echo "وكيل معتمد"; ?></td>
+            <td data-label="الرصيد الحالي"><?php echo $result['real_cash']; ?></td>
+            <td data-label="الرصيد المدين"><?php echo $result['image_cash']; ?></td>
+            <td data-label="التسعيرة المحددة">
+                <?php
+                    $sql2 = "SELECT * FROM price_type WHERE deff_id = '$deff'";
+                    $query2 = mysqli_query($conn,$sql2);
+                        while($res = mysqli_fetch_assoc($query2)){
+                            ?>
+                            <a href="factory_management.php?id=<?php echo $deff;?>" style="text-decoration: none; color: black; font-weight: bolder;"><?php echo $name = $res['price_type_name'];?></a>
+                            <?php
+                        }
+                ?>
+            </td>
+            <td data-label="العمليات | الحالة">
+                <?php
+                if ($result['status'] == 1) {
+                    echo "<a href='personstatus.php?id=$id' class='btn'>" . "مفعل" . "</a>";
+                } else {
+                    echo "<a href='persondown.php?id=$id' class='btn' style='background-color:red;'>غير مفعل</a>";
+                }
+                ?>
+            </td>
+        </tr>
         <?php
         }
     } else {
