@@ -23,6 +23,7 @@ include 'conn.php';
         <form action="allprices.php" method="POST">
             <input type="search" name="name" placeholder=" ابحث عن أي تسعيرة" style="    
     width: 350px;
+    margin-right:40px;
     line-height: 35px;
     display: inline-block;
     background-color: white;
@@ -34,11 +35,11 @@ include 'conn.php';
     border-radius: 8px;
     font-size: 14px;
     opacity: 1;
-    align-items:center;
     margin-bottom: 15px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);">
             <input type="submit" name="search" class="bt" value="🔎بحث" style="
-    width: 130px;
+    width: 190px;
+    margin-right:45px;
     text-decoration: none;
     border-radius: 8px;
     line-height: 35px;
@@ -74,7 +75,7 @@ include 'conn.php';
             </tbody>
         </table>
         <button style="
-            width: 170px;
+    width: 170px;
     text-decoration: none;
     border-radius: 8px;
     line-height: 35px;
@@ -91,13 +92,11 @@ include 'conn.php';
     margin-bottom: 8px;
     cursor: pointer;
     margin-top: 15px;
-    margin-right: 85px;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
-        "><a href="addpricetype.php" style="color: white; text-decoration: none;">
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);"><a href="addpricetype.php" style="color: white; text-decoration: none;">
                 اضافة تسعيرة جديدة <i class="fa fa-plus"></i></a>
         </button>
         <button style="
-            width: 170px;
+    width: 170px;
     text-decoration: none;
     border-radius: 8px;
     line-height: 35px;
@@ -114,7 +113,6 @@ include 'conn.php';
     margin-bottom: 8px;
     cursor: pointer;
     margin-top: 15px;
-    margin-right: 85px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
         ">
             <a href="dashboard.php" style="color: white; text-decoration: none;">

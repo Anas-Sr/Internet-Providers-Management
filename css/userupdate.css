@@ -7,6 +7,7 @@ h1, p {
 }
 h1{
     color: red;
+    text-align: center;
 }
 a, a:active {
     text-decoration: none;
@@ -21,6 +22,7 @@ p{
     padding-top: 35px;
     color: #1363DF;
     font-weight: bolder;
+    text-align: center;
 }
 
 #popup {

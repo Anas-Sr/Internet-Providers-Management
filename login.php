@@ -29,13 +29,40 @@ if (isset($_POST['submit'])) {
                     header('location:admin.php');
                 }
             } else {
-                echo "كلمة السر خاطئة يرجى اعادة كتابتها";
+                ?>
+        <link rel="stylesheet" href="css/userupdate.css">
+        <section id="popup" style="height: calc(60vmin - 40px); width: calc(60vmin - 40px);">
+            <h1><?php echo  "فشل تسجيل الدخول" ;?></h1>
+            <p class="p"><?php echo "كلمة السر خاطئة.. يرجى اعادة كتابتها"; ?></p>
+            <button>
+                <a href="login.php">موافق</a>
+            </button>
+        </section>
+                <?php
             }
         } else {
-            echo "الايميل غير موجود";
+            ?>
+            <link rel="stylesheet" href="css/userupdate.css">
+            <section id="popup" style="height: calc(60vmin - 40px); width: calc(60vmin - 40px);">
+                <h1><?php echo  "فشل تسجيل الدخول" ;?></h1>
+                <p class="p"><?php echo "الايميل غير موجود"; ?></p>
+                <button>
+                    <a href="login.php">موافق</a>
+                </button>
+            </section>
+            <?php
         }
     } else {
-        echo "الرجاء إدخال كلمة السر";
+        ?>
+            <link rel="stylesheet" href="css/userupdate.css">
+            <section id="popup" style="height: calc(60vmin - 40px); width: calc(60vmin - 40px);">
+                <h1><?php echo  "فشل تسجيل الدخول" ;?></h1>
+                <p class="p"><?php echo "الرجاء إدخال كلمة السر"; ?></p>
+                <button>
+                    <a href="login.php">موافق</a>
+                </button>
+            </section>
+        <?php
     }
 }
 ?>
@@ -56,12 +83,12 @@ if (isset($_POST['submit'])) {
         <form action="login.php" method="POST">
             <div class="user-details">
                 <div class="input-box">
-                    <span class="details">كلمة السر</span>
-                    <input type="password" name="pass" placeholder="أدخل كلمة السر" required dir="rtl">
-                </div>
-                <div class="input-box">
                     <span class="details">الايميل</span>
                     <input type="email" name="email" placeholder="أدخل الايميل الخاص بك " required dir="rtl">
+                </div>
+                <div class="input-box">
+                    <span class="details">كلمة السر</span>
+                    <input type="password" name="pass" placeholder="أدخل كلمة السر" required dir="rtl">
                 </div>
             </div>
             <div class="button">
