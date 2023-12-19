@@ -36,7 +36,7 @@ if (isset($_POST['search']) && !empty($_POST['name'])) {
         <?php
         }
     } else {
-        echo "<div text-align:center; padding: 8px; font-size: 20px; font-weight: bolder;'>" . "لا توجد تسعيرة بهذا الاسم" . "</div>";
+        echo "<div style='text-align:center; padding: 8px; font-size: 20px; font-weight: bolder;'>" . "لا توجد تسعيرة بهذا الاسم" . "</div>";
     }
 }
         ?>
