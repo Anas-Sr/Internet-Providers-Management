@@ -1,6 +1,7 @@
 <?php
 include 'conn.php';
 session_start();
+$id = $_GET['id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +28,7 @@ session_start();
         <form action="addrealbill.php" method="POST">
             <div class="user-details">
                 <?php include 'information.php';?>
-            </div>
+                    </div>
             <div class="button" style="margin-top: 10%;">
             <?php 
                 $pross = "SELECT * FROM manufactory";
@@ -41,7 +42,7 @@ session_start();
                     <?php
                 } else{
                     ?>
-                <a href="factories.php?">
+                <a href="factories.php">
                     <input type="button" value="+ اضافة شركات/مزودات جديدة" class="inp2" style="background-color: #1363DF;">
                 </a>
                     <?php

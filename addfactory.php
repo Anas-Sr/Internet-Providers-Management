@@ -15,15 +15,23 @@ include 'addfactory1.php';
 <body dir="rtl">
     <div class="container">
         <div class="title">اضافة مزود خدمة جديد</div>
-        <form action="addfactory.php" method="POST">
+        <form action="addfactory.php" method="POST" enctype="multipart/form-data">
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">اسم المزود الجديد <span style="color: red;">*</span></span>
                     <input type="text" name="name" placeholder="أدخل اسم المزود كاملا..." required>
                 </div>
                 <div class="input-box">
+                    <span class="details">شعار الشركة<span style="color: red;"> *</span></span>
+                    <input style="background-color: white; padding:10px;" type="file" name="image" accept=".jpg, .jpeg, .png" placeholder="أدخل البريد الالكتروني للمزود كاملا..." required>
+                </div>
+                <div class="input-box">
                     <span class="details">البريد الالكتروني للمزود/الشركة<span style="color: red;"> *</span></span>
                     <input type="email" name="email" placeholder="أدخل البريد الالكتروني للمزود كاملا..." required>
+                </div>
+                <div class="input-box">
+                    <span class="details">كلمة السر<span style="color: red;"> *</span></span>
+                    <input type="password" name="pass" placeholder="أدخل كلمة السر كاملا..." required>
                 </div>
                 <div class="input-box">
                     <span class="details">معلومات اضافية <span style="color: red;">*</span></span>
