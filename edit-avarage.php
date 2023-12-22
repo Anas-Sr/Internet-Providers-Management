@@ -1,6 +1,6 @@
 <?php
 include 'conn.php';
-if (isset($_POST['edita'])) {
+if (isset($_POST['edita']) && !empty($_POST['id'])) {
     foreach($_POST['id'] as $key => $value){
         $manid = $value;
         $deffid = $_POST['pid'][$key];

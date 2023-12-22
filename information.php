@@ -14,7 +14,8 @@
                         <span class='details'>" . $man_name . "<span style='color: red;'>*</span></span>
                         <input type='text' name='avg[]'";
             $output .=
-            "' placeholder=' أدخل النسبة الأولية  ...'  required>"
+            "' placeholder=' أدخل النسبة الأولية  ...'
+            required>"
                     . "</div>";
                     
             echo $output;
@@ -24,7 +25,6 @@
         </div>";
         
             }
-} else {
-    echo "<div style='font-weight:bold; font-size:20px';>" . "...يجب عليك اضافة المزودات/الشركات أولا قبل تحديد النسبة" .
-    "<br>"."أو لأن جميع الشركات مرتبطة بهذه التسعيرة". "</div>";
+        }else {
+    echo "<div style='font-weight:bold; font-size:20px';>" . "...يجب عليك اضافة المزودات/الشركات أولا قبل تحديد النسبة" . "</div>";
 }

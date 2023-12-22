@@ -129,32 +129,34 @@ $id = $_GET['id'];
                 <?php
                         }
                     }
+                    ?>
+                    <input type= "submit" name="edita"  value="تعديل  ↩"  style="
+                    width: 100%;
+            padding: 4px;
+            text-decoration: none;
+            border-radius: 8px;
+            line-height: 35px;
+            display: inline-block;
+            background-color: #1363DF;
+            font-weight: bolder;
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+            user-select: none;
+            border: 1px solid #1363DF;
+            font-size: 24px;
+            opacity: 1;
+            margin-bottom: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);">
+            <?php
                 } else {
                     echo "<div style='text-align:center; padding:5px; font-size: 25px; font-weight:bold;'>" . "لا يوجد شركات/مزودات مرتبطة حاليا" . "</div>";
                 }
                 ?>
             </tbody>
         </table>
-        <input type= "submit" name="edita" onclick="colorinput()" value="تعديل  ↩"  style="
-            width: 100%;
-    padding: 4px;
-    text-decoration: none;
-    border-radius: 8px;
-    line-height: 35px;
-    display: inline-block;
-    background-color: #1363DF;
-    font-weight: bolder;
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    user-select: none;
-    border: 1px solid #1363DF;
-    font-size: 24px;
-    opacity: 1;
-    margin-bottom: 8px;
-    cursor: pointer;
-    margin-top: 15px;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);">
     <button style="
         width: 100%;
     text-decoration: none;
