@@ -1,6 +1,6 @@
 <?php
 include 'conn.php';
-$sql = "SELECT * FROM manufactory";
+$sql = "SELECT * FROM manufactory WHERE display = 1";
 $query = mysqli_query($conn, $sql);
 if (!$query) {
     echo "error" . mysqli_error($conn);
@@ -27,6 +27,13 @@ if (mysqli_num_rows($query) > 0) {
                                 echo "<a href='cash_update.php?id=$id' class='btn'>" . "آلي" . "</a>";
                             } else {
                                 echo "<a href='cash_down.php?id=$id' class='btn' style='background-color:red; color:white;'>يدوي</a>";
+                            }
+                            ?>
+                            <?php
+                            if ($result['display'] == 1) {
+                                echo "<a href='dis_down.php?id=$id' class='btn'>" . "أرشفة" . "</a>";
+                            } else {
+                                echo "<a href='dis_update.php?id=$id' class='btn' style='background-color:red; color:white;'>فك الأرشفة</a>";
                             }
                             ?>
                         </td>
