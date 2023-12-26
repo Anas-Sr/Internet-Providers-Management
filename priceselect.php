@@ -15,12 +15,12 @@ if (mysqli_num_rows($query) > 0) {
             <td data-label="العمليات | الحالة">
                 <?php
                 if ($result['status'] == 1) {
-                    echo "<a href='updatestatus.php?id=$id' class='btn'>" . "مفعل" . "</a>";
+                    echo "<a href='updatestatus.php?id=$id' class='btn' style='width: 190px;'>" . "مفعل" . "</a>";
                 } else {
-                    echo "<a href='down.php?id=$id' class='btn' style='background-color:red;'>غير مفعل</a>";
+                    echo "<a href='down.php?id=$id' class='btn' style='background-color:red; width: 190px;'>غير مفعل</a>";
                 }
                 ?>
-                <a href="structure.php?id=<?php echo $result['deff_id']; ?>" class="btn" style="color: white;">الشركات الجديدة</a>
+                <a href="structure.php?id=<?php echo $result['deff_id']; ?>" class="btn" style="color: white; width: 190px;">الشركات الجديدة</a>
             </td>
         </tr>
 <?php

@@ -13,6 +13,12 @@
                 </h2>
             </li>
             <li>
+                <a href="dashboard.php" class="active" style="color: #1363DF;">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <p>الصفحة الرئيسية</p>
+                </a>
+            </li>
+            <li>
                 <a href="#" class="active" onclick="optionshow()" id="active" style="color: #1363DF;">
                     <i class="fa fa-users"></i>
                     <p>نقطة المستخدمين <i class="fa-solid fa-caret-right"></i></p>
@@ -91,7 +97,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="settings.php">
                     <i class="fa fa-gear"></i>
                     <p>نقطة الاعدادات الرئيسية</p>
                 </a>

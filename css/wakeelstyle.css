@@ -86,6 +86,21 @@ body.menu-shown .menu {
     font-size: 18px;
     opacity: 1;
 }
+.table tbody tr td .btn1{
+    width: 100px;
+    text-decoration: none;
+    line-height: 35px;
+    display: inline-block;
+    background-color: #1363DF;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 2px solid none;
+    font-size: 18px;
+    opacity: 1;
+}
 .design-form{
     display: flex;
     flex-direction: column;

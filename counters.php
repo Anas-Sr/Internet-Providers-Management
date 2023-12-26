@@ -10,10 +10,15 @@ $query2 = mysqli_query($conn,$sql2);
 while($res2 = mysqli_fetch_assoc($query2)){
     $r2 =  $res2['count(id)'];
 }
-$sql3 = "SELECT count(man_id) FROM manufactory";
+$sql3 = "SELECT count(man_id) FROM manufactory WHERE display = 1";
 $query3 = mysqli_query($conn,$sql3);
 while($res3 = mysqli_fetch_assoc($query3)){
     $r3 =  $res3['count(man_id)'];
+}
+$sql5 = "SELECT count(man_id) FROM manufactory WHERE display = 0";
+$query5 = mysqli_query($conn,$sql5);
+while($res5 = mysqli_fetch_assoc($query5)){
+    $r5 =  $res5['count(man_id)'];
 }
 $sql4 = "SELECT count(deff_id) FROM price_type";
 $query4 = mysqli_query($conn,$sql4);

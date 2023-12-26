@@ -2,7 +2,7 @@
 include 'conn.php';
 if (isset($_POST['search']) && !empty($_POST['name'])) {
     $search = $_POST['name'];
-    $sql = "SELECT * FROM manufactory WHERE display= 1 AND man_name LIKE '$search%' ";
+    $sql = "SELECT * FROM manufactory WHERE display= 0 AND man_name LIKE '$search%' ";
     $query = mysqli_query($conn, $sql);
     if (!$query) {
         echo "error" . mysqli_error($conn);

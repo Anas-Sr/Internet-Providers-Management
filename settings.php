@@ -23,60 +23,51 @@ include 'conn.php';
             <i class="fas fa-chart-bar"></i>
         </span>
         <div class="data-info" id="data-info">
-            <div class="box">
-                <i class="fa fa-wallet"></i>
+        <div class="box">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
                 <div class="data">
-                    <p>طلبات الدفع</p>
+                    <p><a href="dashboard.php"> الصفحة الرئيسية</a></p>
                 </div>
             </div>
             <div class="box">
-                <i class="fa fa-chart-line"></i>
+                <div class="notification"><?php if($r1 != 0){echo $r1.'+';} else{echo '0';}?></div>
+                <i class="fa fa-users"></i>
                 <div class="data">
-                    <p>السجل المالي</p>
+                <p><a href="addwakeel.php">إضافة وكيل جديد +</a></p>
                 </div>
             </div>
             <div class="box">
-                <i class="fa fa-share"></i>
+                <div class="notification"><?php if($r2 != 0){echo $r2.'+';} else{echo '0';}?></div>
+                <i class="fa fa-users"></i>
                 <div class="data">
-                    <p> تحويل الرصيد</p>
+                <p><a href="addaccount.php">إضافة حساب جديد +</a></p>
                 </div>
             </div>
             <div class="box">
-                <i class="fa fa-s"></i>
-                <div class="data">
-                    <p>نقطة سيرياتيل</p>
-                </div>
-            </div>
-            <div class="box">
-                <i class="fa fa-m"></i>
-                <div class="data">
-                    <p>نقطة MTN</p>
-                </div>
-            </div>
-            <div class="box">
-            <div class="notification"><?php if($r3 != 0){echo $r3.'+';} else{echo '0';}?></div>
+                <div class="notification"><?php if($r3 != 0){echo $r3.'+';} else{echo '0';}?></div>
                 <i class="fa-solid fa-wifi"></i>
                 <div class="data">
-                <p><a href="factories.php">نقطة مزودات الانترنت</a></p>
+                <p><a href="addfactory.php">إضافة مزود خدمة جديد +</a></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="notification"><?php if($r5 != 0){echo $r5.'+';} else{echo '0';}?></div>
+                <i class="fa-solid fa-wifi"></i>
+                <div class="data">
+                <p><a href="archfactory.php">المزودات المؤرشفة</a></p>
                 </div>
             </div>
             <div class="box">
             <div class="notification"><?php if($r4 != 0){echo $r4.'+';} else{echo '0';}?></div>
-            <i class="fa-solid fa-chart-simple"></i>
+                <i class="fa-solid fa-chart-simple"></i>
                 <div class="data">
-                    <p><a href="allprices.php">لائحة التساعير</a></p>
+                <p><a href="addpricetype.php">إضافة تسعيرة جديدة +</a></p>
                 </div>
             </div>
             <div class="box">
-            <i class="fa-solid fa-circle-dollar-to-slot"></i>
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
                 <div class="data">
-                    <p>نقطة خدمات التسديد</p>
-                </div>
-            </div>
-            <div class="box">
-            <i class="fa fa-gear"></i>
-                <div class="data">
-                    <p><a href="settings.php">نقطة الاعدادات الرئيسية</a></p>
+                    <p><a href="logout.php">تسجيل الخروج</a></p>
                 </div>
             </div>
         </div>

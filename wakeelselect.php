@@ -31,9 +31,9 @@ if (mysqli_num_rows($query) > 0) {
             <td data-label="العمليات | الحالة">
                 <?php
                 if ($result['status'] == 1) {
-                    echo "<a href='personstatus.php?id=$id' class='btn'>" . "مفعل" . "</a>";
+                    echo "<a href='personstatus.php?id=$id' class='btn'   style='width: 190px;'>" . "مفعل" . "</a>";
                 } else {
-                    echo "<a href='persondown.php?id=$id' class='btn' style='background-color:red;'>غير مفعل</a>";
+                    echo "<a href='persondown.php?id=$id' class='btn' style='background-color:red; width: 190px;'>غير مفعل</a>";
                 }
                 ?>
             </td>
