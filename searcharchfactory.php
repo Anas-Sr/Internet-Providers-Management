@@ -29,24 +29,10 @@ if (isset($_POST['search']) && !empty($_POST['name'])) {
                         <td data-label="معلومات اضافية"><?php echo $result['man_information']; ?></td>
                         <td data-label="العمليات | الحالة">
                             <?php
-                            if ($result['status'] == 1) {
-                                echo "<a href='fupdate.php?id=$id' class='btn'>" . "مفعل" . "</a>";
-                            } else {
-                                echo "<a href='fdown.php?id=$id' class='btn' style='background-color:red; color:white;'>غير مفعل</a>";
-                            }
-                            ?>
-                            <?php
-                            if ($result['real_status'] == 1) {
-                                echo "<a href='cash_update.php?id=$id' class='btn'>" . "آلي" . "</a>";
-                            } else {
-                                echo "<a href='cash_down.php?id=$id' class='btn' style='background-color:red; color:white;'>يدوي</a>";
-                            }
-                            ?>
-                            <?php
                             if ($result['display'] == 1) {
                                 echo "<a href='dis_down.php?id=$id' class='btn'>" . "أرشفة" . "</a>";
                             } else {
-                                echo "<a href='dis_update.php?id=$id' class='btn' style='background-color:red; color:white;'>فك أرشفة</a>";
+                                echo "<a href='dis_update.php?id=$id' class='btn' style='background-color:red; color:white; width: 190px;'>فك أرشفة</a>";
                             }
                             ?>
                         </td>

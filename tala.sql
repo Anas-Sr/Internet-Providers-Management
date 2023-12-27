@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 09 ديسمبر 2023 الساعة 01:56
--- إصدار الخادم: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: 26 ديسمبر 2023 الساعة 21:42
+-- إصدار الخادم: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,14 +39,15 @@ CREATE TABLE `allaccount` (
   `image_cash` int(11) NOT NULL DEFAULT 0,
   `deff_id` int(11) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- إرجاع أو استيراد بيانات الجدول `allaccount`
 --
 
 INSERT INTO `allaccount` (`id`, `fullname`, `a_email`, `a_password`, `a_address`, `a_phone`, `kind`, `real_cash`, `image_cash`, `deff_id`, `status`) VALUES
-(8, 'anasalsrouji', 'anas@gmail.com', '145236', 'دمشق المهاجرين', 982188151, 1, 0, 0, 5, 0);
+(8, 'anasalsrouji', 'anas@gmail.com', '145236', 'دمشق المهاجرين', 982188151, 1, 0, 0, 5, 0),
+(9, 'محمد شفيق زيتونة', 'mmm@mm.com', '147852', 'دمشق المهاجرين', 982188151, 0, 0, 0, 5, 0);
 
 -- --------------------------------------------------------
 
@@ -61,7 +62,7 @@ CREATE TABLE `bills` (
   `real_price` int(11) NOT NULL DEFAULT 0,
   `plus_avr` double NOT NULL DEFAULT 0,
   `status` tinyint(4) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -72,11 +73,22 @@ CREATE TABLE `bills` (
 CREATE TABLE `manufactory` (
   `man_id` int(11) NOT NULL,
   `man_name` varchar(200) NOT NULL,
+  `image` varchar(100) NOT NULL,
   `man_email` varchar(250) NOT NULL,
+  `pass` varchar(100) NOT NULL,
   `man_information` varchar(250) NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT 0,
-  `real_status` tinyint(4) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `real_status` tinyint(4) NOT NULL DEFAULT 0,
+  `display` tinyint(4) NOT NULL DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- إرجاع أو استيراد بيانات الجدول `manufactory`
+--
+
+INSERT INTO `manufactory` (`man_id`, `man_name`, `image`, `man_email`, `pass`, `man_information`, `status`, `real_status`, `display`) VALUES
+(8, 'anasalsrouji', '65882293167f0.jpg', 'anas@gmail.com', '147852', 'دمشق المهاجرين', 1, 0, 1),
+(9, 'رن نت', '658822a7548d1.jpg', 'aknancanon@gmail.com', '123456', 'دمشق حي التجارة الغربي', 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -88,14 +100,14 @@ CREATE TABLE `price_type` (
   `deff_id` int(11) NOT NULL,
   `price_type_name` varchar(200) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- إرجاع أو استيراد بيانات الجدول `price_type`
 --
 
 INSERT INTO `price_type` (`deff_id`, `price_type_name`, `status`) VALUES
-(5, 'VIP', 0);
+(5, 'VIP', 1);
 
 -- --------------------------------------------------------
 
@@ -109,7 +121,7 @@ CREATE TABLE `users` (
   `u_email` varchar(300) NOT NULL,
   `pass` varchar(200) NOT NULL,
   `rank` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- إرجاع أو استيراد بيانات الجدول `users`
@@ -163,7 +175,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `allaccount`
 --
 ALTER TABLE `allaccount`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `bills`
@@ -175,7 +187,7 @@ ALTER TABLE `bills`
 -- AUTO_INCREMENT for table `manufactory`
 --
 ALTER TABLE `manufactory`
-  MODIFY `man_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `man_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `price_type`
@@ -190,17 +202,17 @@ ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- قيود الجداول المحفوظة
+-- قيود الجداول المُلقاة.
 --
 
 --
--- القيود للجدول `allaccount`
+-- قيود الجداول `allaccount`
 --
 ALTER TABLE `allaccount`
   ADD CONSTRAINT `allaccount_ibfk_1` FOREIGN KEY (`deff_id`) REFERENCES `price_type` (`deff_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- القيود للجدول `bills`
+-- قيود الجداول `bills`
 --
 ALTER TABLE `bills`
   ADD CONSTRAINT `bills_ibfk_1` FOREIGN KEY (`deff_id`) REFERENCES `price_type` (`deff_id`) ON DELETE CASCADE ON UPDATE CASCADE,
