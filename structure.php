@@ -31,8 +31,11 @@ $id = $_GET['id'];
                     </div>
             <div class="button" style="margin-top: 10%;">
             <?php 
-                $pross = "SELECT * FROM manufactory";
-                $querypross = mysqli_query($conn,$pross);
+                    $sql = "SELECT m.man_id, m.man_name
+                    FROM manufactory m
+                    LEFT JOIN bills b ON m.man_id = b.man_id AND b.deff_id = $id
+                    WHERE b.man_id IS NULL";
+                $querypross = mysqli_query($conn, $sql);
                 if(mysqli_num_rows($querypross) > 0){
                     ?>
                 <input type="submit" name="add" value="اضافة">
@@ -44,6 +47,9 @@ $id = $_GET['id'];
                     ?>
                 <a href="factories.php">
                     <input type="button" value="+ اضافة شركات/مزودات جديدة" class="inp2" style="background-color: #1363DF;">
+                </a>
+                <a href="factory_management.php?id=<?php echo $p_id;?>">
+                    <input type="button" value="عرض الشركات المرتبطة" class="inp2" style="background-color: #1363DF;">
                 </a>
                     <?php
                 }
