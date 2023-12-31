@@ -17,12 +17,26 @@ while($result = mysqli_fetch_assoc($query)){
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/profilestyle.css">
+        <style>
+.profile-image{
+    width: 300px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.profile-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+        </style>
     </head>
 
     <body dir="rtl">
         <div class="container">
             <div class="title"><?php echo $result['man_name']; ?></div>
-            <form action="factoryupdate.php" method="POST">
+            <form action="factoryupdate.php" method="POST" enctype="multipart/form-data">
                 <div class="user-details">
                     <div class="input-box" style="display: none;">
                         <input type="number" name="id" value="<?php echo $result['man_id']; ?>" required>
@@ -70,6 +84,14 @@ while($result = mysqli_fetch_assoc($query)){
                         }
                         ?>
                     </select>
+                </div>
+                <div class="input-box">
+                        <span class="details">شعار المزود <span style="color: red;">*</span></span>
+                        <input type="file" name="image" accept=".jpg, .jpeg, .png" style="background-color: white; padding:10px;" required>
+                        <input type="hidden" name="image-old"  value="<?php echo $result['image'] ;?>">
+                </div>
+                <div class="profile-image">
+                <img src="img/<?php echo $result['image'];?>" alt="خطأ في ظهور الصورة">
                 </div>
                 </div>
                 <div class="button">

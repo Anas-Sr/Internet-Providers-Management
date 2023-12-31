@@ -9,15 +9,23 @@ $pass = $_POST['pass'];
 $address = $_POST['address'];
 $status = $_POST['status'];
 $real_status = $_POST['real_status'];
+$new_img = $_FILES['image']['name'];
+$old_img = $_POST['image-old'];
 
-if (!empty($id) && !empty($name) && !empty($email) && !empty($pass) && !empty($address)) {
+if (!empty($id) && !empty($name) && !empty($email) && !empty($pass) && !empty($address) && !empty($new_img)) {
     $success = true;
+    $update_img = $new_img;
     try {
-        $sql = "UPDATE manufactory SET man_name='$name', man_email='$email', pass='$pass'
+        $sql = "UPDATE manufactory SET man_name='$name', image='$update_img', man_email='$email', pass='$pass'
             ,man_information='$address', status='$status', real_status='$real_status' WHERE man_id='$id'";
         $query = mysqli_query($conn, $sql);
+        if($query){
+            move_uploaded_file($_FILES['image']['tmp_name'],"img/".$_FILES['image']['name']);
+            unlink("img/".$old_img);
+        }
     } catch (PDOException $e) {
         $success = false;
+        $update_img = $old_img;
     }
 ?>
     <link rel="stylesheet" href="css/userupdate.css">

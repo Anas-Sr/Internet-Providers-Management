@@ -23,7 +23,7 @@ include 'addfactory1.php';
                 </div>
                 <div class="input-box">
                     <span class="details">شعار الشركة<span style="color: red;"> *</span></span>
-                    <input style="background-color: white; padding:10px;" type="file" name="image" accept=".jpg, .jpeg, .png" placeholder="أدخل البريد الالكتروني للمزود كاملا..." required>
+                    <input style="background-color: white; padding:10px;" type="file" name="image" accept=".jpg, .jpeg, .png" required>
                 </div>
                 <div class="input-box">
                     <span class="details">البريد الالكتروني للمزود/الشركة<span style="color: red;"> *</span></span>
