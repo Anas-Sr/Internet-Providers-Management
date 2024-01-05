@@ -20,7 +20,7 @@ while($result = mysqli_fetch_assoc($query)){
         <style>
 .profile-image{
     width: 300px;
-    height: 100px;
+    height: 120px;
     overflow: hidden;
     border-radius: 5px;
 }

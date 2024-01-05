@@ -31,11 +31,12 @@ if (mysqli_num_rows($query) > 0) {
             <td data-label="العمليات | الحالة">
                 <?php
                 if ($result['status'] == 1) {
-                    echo "<a href='personstatus.php?id=$id' class='btn'   style='width: 190px;'>" . "مفعل" . "</a>";
+                    echo "<a href='personstatus.php?id=$id' class='btn'   style='width: 120px;'>" . "مفعل" . "</a>";
                 } else {
-                    echo "<a href='persondown.php?id=$id' class='btn' style='background-color:red; width: 190px;'>غير مفعل</a>";
+                    echo "<a href='persondown.php?id=$id' class='btn' style='background-color:red; width: 120px;'>غير مفعل</a>";
                 }
                 ?>
+                <a href='deleteaccount.php?id=<?php echo $id;?>' class='btn' style='background-color:red; width: 120px;' onclick="return confirm('هل أنت متأكد؟')">حذف الحساب</a>
             </td>
         </tr>
 <?php
