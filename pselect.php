@@ -1,6 +1,6 @@
 <?php
 include 'conn.php';
-$sql = "SELECT * FROM manufactory WHERE kind = 0";
+$sql = "SELECT * FROM manufactory WHERE kind = 1";
 $query = mysqli_query($conn, $sql);
 if (!$query) {
     echo "error" . mysqli_error($conn);
@@ -17,23 +17,23 @@ if (mysqli_num_rows($query) > 0) {
                         <td data-label="العمليات | الحالة">
                             <?php
                             if ($result['status'] == 1) {
-                                echo "<a href='fupdate.php?id=$id' class='btn'>" . "مفعل" . "</a>";
+                                echo "<a href='pfupdate.php?id=$id' class='btn'>" . "مفعل" . "</a>";
                             } else {
-                                echo "<a href='fdown.php?id=$id' class='btn' style='background-color:red; color:white;'>غير مفعل</a>";
+                                echo "<a href='pfdown.php?id=$id' class='btn' style='background-color:red; color:white;'>غير مفعل</a>";
                             }
                             ?>
                             <?php
                             if ($result['real_status'] == 1) {
-                                echo "<a href='cash_update.php?id=$id' class='btn'>" . "آلي" . "</a>";
+                                echo "<a href='pcash_update.php?id=$id' class='btn'>" . "آلي" . "</a>";
                             } else {
-                                echo "<a href='cash_down.php?id=$id' class='btn' style='background-color:red; color:white;'>يدوي</a>";
+                                echo "<a href='pcash_down.php?id=$id' class='btn' style='background-color:red; color:white;'>يدوي</a>";
                             }
                             ?>
                             <?php
                             if ($result['display'] == 1) {
-                                echo "<a href='dis_down.php?id=$id' class='btn'>" . "أرشفة" . "</a>";
+                                echo "<a href='pdis_down.php?id=$id' class='btn'>" . "أرشفة" . "</a>";
                             } else {
-                                echo "<a href='dis_update.php?id=$id' class='btn' style='background-color:red; color:white;'>فك الأرشفة</a>";
+                                echo "<a href='pdis_update.php?id=$id' class='btn' style='background-color:red; color:white;'>فك الأرشفة</a>";
                             }
                             ?>
                         </td>
@@ -41,6 +41,6 @@ if (mysqli_num_rows($query) > 0) {
 <?php
     }
 } else {
-    echo "<div style='text-align:center; padding:5px; font-size: 25px; font-weight:bold; font-style:italic;'>" . "لا يوجد مزودات انترنت حاليا" . "</div>";
+    echo "<div style='text-align:center; padding:5px; font-size: 25px; font-weight:bold; font-style:italic;'>" . "لا يوجد خدمات تسديد حاليا" . "</div>";
 }
 ?>

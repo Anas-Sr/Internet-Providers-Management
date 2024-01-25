@@ -83,12 +83,12 @@ if (isset($_POST['submit'])) {
         <form action="login.php" method="POST">
             <div class="user-details">
                 <div class="input-box">
-                    <span class="details">الايميل</span>
-                    <input type="email" name="email" placeholder="أدخل الايميل الخاص بك " required dir="rtl">
-                </div>
-                <div class="input-box">
                     <span class="details">كلمة السر</span>
                     <input type="password" name="pass" placeholder="أدخل كلمة السر" required dir="rtl">
+                </div>
+                <div class="input-box">
+                    <span class="details">الايميل</span>
+                    <input type="email" name="email" placeholder="أدخل الايميل الخاص بك " required dir="rtl">
                 </div>
             </div>
             <div class="button">

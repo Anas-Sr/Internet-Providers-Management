@@ -70,7 +70,7 @@ include 'conn.php';
             <div class="box">
             <i class="fa-solid fa-circle-dollar-to-slot"></i>
                 <div class="data">
-                    <p>نقطة خدمات التسديد</p>
+                    <p><a href="payment-factory.php">نقطة خدمات التسديد</a></p>
                 </div>
             </div>
             <div class="box">

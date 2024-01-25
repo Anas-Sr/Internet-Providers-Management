@@ -84,9 +84,10 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="payment-factory.php">
                     <i class="fa-solid fa-circle-dollar-to-slot"></i>
                     <p>نقطة خدمات التسديد</p>
+                    <span style="margin-right: auto; color: white; font-weight: bolder; background-color: red; width: 30px; text-align:center; border-radius: 30%; font-size: 21px;"><?php if($r6 != 0){echo $r6.'+';} else{echo '';}?></span>
                 </a>
             </li>
             <li>

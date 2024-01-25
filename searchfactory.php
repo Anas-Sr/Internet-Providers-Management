@@ -2,7 +2,7 @@
 include 'conn.php';
 if (isset($_POST['search']) && !empty($_POST['name'])) {
     $search = $_POST['name'];
-    $sql = "SELECT * FROM manufactory WHERE display= 1 AND man_name LIKE '$search%' ";
+    $sql = "SELECT * FROM manufactory WHERE kind= 0 AND man_name LIKE '$search%' ";
     $query = mysqli_query($conn, $sql);
     if (!$query) {
         echo "error" . mysqli_error($conn);
@@ -54,7 +54,7 @@ if (isset($_POST['search']) && !empty($_POST['name'])) {
         <?php
         }
     } else {
-        echo "<div style='text-align:center; padding: 8px; font-size: 20px; font-weight: bolder;'>" . "لا يوجد مزود خدمة مؤرشف بهذا الاسم" . "</div>";
+        echo "<div style='text-align:center; padding: 8px; font-size: 20px; font-weight: bolder;'>" . "لا يوجد مزود خدمة بهذا الاسم" . "</div>";
     }
 }
         ?>

@@ -58,7 +58,7 @@ body.menu-shown .menu {
     font-size: 22px;
     font-weight: normal;
     color: black;
-    padding: 8px;
+    padding: 0px;
     text-align: center;
     /* background: linear-gradient(135deg, #DFF6FF, #47B5FF); */
     border: 1px solid white;
