@@ -10,6 +10,7 @@ if (isset($_POST['search']) && !empty($_POST['name'])) {
     }
     if (mysqli_num_rows($query) > 0) {
         while ($result = mysqli_fetch_assoc($query)) {
+            $id = $result['id'];
 ?>
             <table class="table" id="table" style="margin-bottom: 50px;">
                 <thead>
@@ -31,7 +32,16 @@ if (isset($_POST['search']) && !empty($_POST['name'])) {
                         <td data-label="نوع الحساب"><?php echo "حساب تاجر"; ?></td>
                         <td data-label="الرصيد الحالي"><?php echo $result['real_cash']; ?></td>
                         <td data-label="الرصيد المدين"><?php echo $result['image_cash']; ?></td>
-                        <td data-label="العمليات | الحالة"><a href="#" class="btn">aaaaaa</a></td>
+                        <td data-label="العمليات | الحالة">
+                <?php
+                if ($result['status'] == 1) {
+                    echo "<a href='accountstatus.php?id=$id' class='btn' style='width: 120px;'>" . "مفعل" . "</a>";
+                } else {
+                    echo "<a href='accountdown.php?id=$id' class='btn' style='background-color:red; width: 120px;'>غير مفعل</a>";
+                }
+                ?>
+                <a href='deleteaccount.php?id=<?php echo $id;?>' class='btn' style='background-color:red; width: 120px;' onclick="return confirm('هل أنت متأكد؟')">حذف الحساب</a>
+            </td>
                     </tr>
         <?php
         }
