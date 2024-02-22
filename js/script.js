@@ -15,7 +15,7 @@ function optionhide() {
   document.getElementById("active2").style.display = "none";
   document.getElementById("logout").style.display = "block";
 }
-
+//email  password  price  
 
 // تحديد الأرقام المدخلة فقط مع التاكد من عدد الخانات الرقمية للجوال
 (function setPhoneFieldPattern() {

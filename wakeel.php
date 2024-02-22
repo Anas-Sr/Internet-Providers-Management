@@ -14,10 +14,8 @@ include 'conn.php';
     <title>Document</title>
     <style>
         nav{
-            position: relative;
-            top: -1%;
-            right: -30%; 
-            transform: translate(50%,50%);
+            position: absolute;
+            transform: translate(280%,-100%);
             background:  #DFF6FF;
             width: 210px;
             line-height: 30px;
@@ -25,6 +23,7 @@ include 'conn.php';
             border-radius: 5px;
             text-align: right;
             border: 1px solid blue;
+            z-index: 1;
         }
         nav label{
             color: black;
@@ -34,7 +33,7 @@ include 'conn.php';
             font-weight: bold;
         }
         .button span{
-            line-height: 35px;
+            line-height: 5px;
         }
         nav span{
             display: none;
@@ -47,7 +46,7 @@ include 'conn.php';
         }
         @media (max-width: 750px) {
             nav{
-                right: 32%;
+                transform: translate(-20%,-100%);
                 z-index: 1;
             }
         }
@@ -99,6 +98,7 @@ include 'conn.php';
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);">
     
         </form>
+        <div class="" style="position: relative;">
         <nav>
             <label for="btn" class="button">المزيد من الخيارات 
                 <span class="fas fa-caret-down"></span>
@@ -119,6 +119,7 @@ include 'conn.php';
         ?>
             </span>
             </nav>
+        </div>
         <?php
         include 'search.php';
         ?>

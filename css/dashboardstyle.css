@@ -23,11 +23,12 @@ body{
 .profile{
     display: flex;
     align-items: center;
-    gap: 15px;
+    
 }
 .profile h2{
     font-size: 20px;
     color: darkblue;
+    display: block;
 }
 .profile h2 span{
     color: #1363DF;

@@ -12,7 +12,9 @@
                     <span><?php echo $_SESSION['u_email']."<br>"; ?></span>
                     <span style="color: black; font-size:18px;">
                             <?php
-                                echo "<br>".date("h:i:s")."&ensp;"."&ensp;".
+                                $a = date("h");
+                                $b = $a + 2 ;
+                                echo "<br>".date("$b:i:s")."&ensp;"."&ensp;".
                                 date("Y-m-d");
                             ?>
                     </span>
