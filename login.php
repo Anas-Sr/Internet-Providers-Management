@@ -79,7 +79,7 @@ if (isset($_POST['submit'])) {
 
 <body>
     <div class="container">
-        <div class="title">TalaTell</div>
+        <div class="title">TalaTell <span>تسجيل الدخول</span></div>
         <form action="login.php" method="POST">
             <div class="user-details">
                 <div class="input-box">

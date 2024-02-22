@@ -25,8 +25,14 @@ body{
     font-weight: bolder;
     position: relative;
     color: #1363DF;
-    font-style: italic;
-    letter-spacing: 1px;
+    
+}
+.container .title span{
+    font-size: 25px;
+    font-style: normal;
+    font-weight: bolder;
+    position: relative;
+    left: 35%;
 }
 .container .title1{
     font-size: 19px;

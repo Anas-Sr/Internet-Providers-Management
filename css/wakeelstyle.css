@@ -27,7 +27,7 @@ body{
     margin-bottom: 40px;
 }
 .table{
-    width: 85%;
+    width: 87%;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
 }
 .table thead{
@@ -37,10 +37,11 @@ body{
 .table thead tr th{
     font-size: 20px;
     font-weight: bold;
-    padding: 12px;
+    padding: 10px;
     opacity: 1;
     vertical-align: top;
-    border: 1px solid white;
+    
+    border-radius: 5px 5px 0px 0px;
 }
 /* .table tbody tr:nth-child(even){
     background: darkblue;
@@ -58,10 +59,11 @@ body.menu-shown .menu {
     font-size: 22px;
     font-weight: normal;
     color: black;
-    padding: 0px;
+    padding: 4px;
     text-align: center;
     /* background: linear-gradient(135deg, #DFF6FF, #47B5FF); */
-    border: 1px solid white;
+    border: 1px solid none;
+    border-radius: 5px 5px 5px 5px;
 }
 .table tbody tr td {
     background-color: #DFF6FF;

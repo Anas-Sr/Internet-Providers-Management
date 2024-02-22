@@ -9,7 +9,13 @@
                     <i class="fa fa-user-circle" aria-hidden="true" style="font-size: 50px; color: black;"></i>
                 </div>
                 <h2><?php echo $_SESSION['fullname']; ?><br>
-                    <span><?php echo $_SESSION['u_email']; ?></span>
+                    <span><?php echo $_SESSION['u_email']."<br>"; ?></span>
+                    <span style="color: black; font-size:18px;">
+                            <?php
+                                echo "<br>".date("h:i:s")."&ensp;"."&ensp;".
+                                date("Y-m-d");
+                            ?>
+                    </span>
                 </h2>
             </li>
             <li>

@@ -1,6 +1,6 @@
 <?php
 include 'conn.php';
-$sql = "SELECT * FROM manufactory WHERE kind = 0";
+$sql = "SELECT * FROM manufactory WHERE kind = 0 AND display = 1";
 $query = mysqli_query($conn, $sql);
 if (!$query) {
     echo "error" . mysqli_error($conn);

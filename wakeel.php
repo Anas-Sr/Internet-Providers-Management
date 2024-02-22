@@ -12,12 +12,53 @@ include 'conn.php';
     <link rel="stylesheet" href="css/wakeelstyle.css">
     <link rel="stylesheet" href="css/dashboardstyle.css">
     <title>Document</title>
+    <style>
+        nav{
+            position: relative;
+            top: -1%;
+            right: -30%; 
+            transform: translate(50%,50%);
+            background:  #DFF6FF;
+            width: 210px;
+            line-height: 30px;
+            padding: 2px 25px;
+            border-radius: 5px;
+            text-align: right;
+            border: 1px solid blue;
+        }
+        nav label{
+            color: black;
+            font-size: 20px;
+            display: block;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .button span{
+            line-height: 35px;
+        }
+        nav span{
+            display: none;
+        }
+        input{
+            display: none;
+        }
+        [id^=btn]:checked + span {
+            display: block;
+        }
+        @media (max-width: 750px) {
+            nav{
+                right: 32%;
+                z-index: 1;
+            }
+        }
+    </style>
 </head>
 
 <body dir="rtl">
     <?php
     include 'sidebar.php';
     ?>
+
     <div class="table-container">
         <h1 class="heading">جميع الوكلاء</h1>
         <form action="wakeel.php" method="POST">
@@ -56,21 +97,32 @@ include 'conn.php';
     margin-bottom: 15px;
     cursor: pointer;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);">
+    
         </form>
-        <?php
-        include 'search.php';
-        ?>
-        <?php 
+        <nav>
+            <label for="btn" class="button">المزيد من الخيارات 
+                <span class="fas fa-caret-down"></span>
+            </label>
+            <input type="checkbox"  id="btn">
+            
+            <span style="color: #1363DF;">مجموع الأرصدة:
+            <?php 
             include 'conn.php';
             $sql5 = "SELECT sum(real_cash) FROM allaccount WHERE kind = 1";
             $query5 = mysqli_query($conn,$sql5);
             while($res5 = mysqli_fetch_assoc($query5)){
                 $r5 =  $res5['sum(real_cash)'];
-            echo "<div style='padding:10px; font-size :25px; font-weight:bolder;'>";
-            echo "مجموع الأرصدة:". "&ensp;" .$r5 ;
+            echo "<div style=' font-size :20px; font-weight:bolder;'>";
+            echo $r5 ;
             echo"</div>";
         }
         ?>
+            </span>
+            </nav>
+        <?php
+        include 'search.php';
+        ?>
+
         <table class="table" id="table">
             <thead>
                 <tr>
