@@ -19,9 +19,9 @@ include 'conn.php';
     include 'sidebar.php';
     ?>
     <div class="table-container">
-        <h1 class="heading"> مزودات الانترنت المؤرشفة</h1>
-        <form action="archfactory.php" method="POST">
-            <input type="search" name="name" placeholder="ابحث عن أي مزود انترنت مؤرشف" style="    
+        <h1 class="heading">نقطة سيريتيل | Syriatel</h1>
+        <form action="syr.php" method="POST">
+            <input type="search" name="name" placeholder=" ابحث عن أي نقطة في سيريتيل" style="    
     width: 350px;
     margin-right:40px;
     line-height: 35px;
@@ -58,7 +58,7 @@ include 'conn.php';
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);">
         </form>
         <?php
-        include 'searcharchfactory.php';
+        include 'searchsyr.php';
         ?>
         <table class="table" id="table">
             <thead>
@@ -72,12 +72,12 @@ include 'conn.php';
             </thead>
             <tbody>
                 <?php
-                include 'archfselect.php';
+                include 'syrselect.php';
                 ?>
             </tbody>
         </table>
         <button style="
-        width: 170px;
+        width: 200px;
     text-decoration: none;
     border-radius: 8px;
     line-height: 35px;
@@ -95,8 +95,8 @@ include 'conn.php';
     cursor: pointer;
     margin-top: 15px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
-        "><a href="addfactory.php" style="color: white; text-decoration: none;">
-                اضافة مزود خدمة جديد <i class="fa fa-plus"></i></a>
+        "><a href="addsyr.php" style="color: white; text-decoration: none;">
+                اضافة نقطة سيريتيل جديدة <i class="fa fa-plus"></i></a>
         </button>
         <button style="
         width: 170px;
@@ -118,8 +118,8 @@ include 'conn.php';
     margin-top: 15px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
         ">
-            <a href="settings.php" style="color: white; text-decoration: none;">
-                العودة للوحة الاعدادات <i class="fa-solid fa-arrow-right-from-bracket" style="margin-right: 15px;"></i></a>
+            <a href="dashboard.php" style="color: white; text-decoration: none;">
+                العودة للوحة التحكم <i class="fa-solid fa-arrow-right-from-bracket" style="margin-right: 15px;"></i></a>
         </button>
     </div>
     <script src="js/script.js">

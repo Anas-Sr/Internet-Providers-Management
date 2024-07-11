@@ -15,7 +15,7 @@ $query3 = mysqli_query($conn,$sql3);
 while($res3 = mysqli_fetch_assoc($query3)){
     $r3 =  $res3['count(man_id)'];
 }
-$sql5 = "SELECT count(man_id) FROM manufactory WHERE kind = 0 AND display = 0";
+$sql5 = "SELECT count(man_id) FROM manufactory WHERE  display = 0";
 $query5 = mysqli_query($conn,$sql5);
 while($res5 = mysqli_fetch_assoc($query5)){
     $r5 =  $res5['count(man_id)'];
@@ -29,4 +29,9 @@ $sql6 = "SELECT count(man_id) FROM manufactory WHERE kind = 1";
 $query6 = mysqli_query($conn,$sql6);
 while($res6 = mysqli_fetch_assoc($query6)){
     $r6 =  $res6['count(man_id)'];
+}
+$sql7 = "SELECT count(man_id) FROM manufactory WHERE kind = 2";
+$query7 = mysqli_query($conn,$sql7);
+while($res7 = mysqli_fetch_assoc($query7)){
+    $r7 =  $res7['count(man_id)'];
 }

@@ -10,7 +10,7 @@ include 'conn.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/dashboardstyle.css">
-    <title>Document</title>
+    <title>إدارة صفحة مزودات خدمة الانترنت</title>
 </head>
 
 <body dir="rtl">
@@ -42,9 +42,10 @@ include 'conn.php';
                 </div>
             </div>
             <div class="box">
+            <div class="notification"><?php if($r7 != 0){echo $r7.'+';} else{echo '0';}?></div>
                 <i class="fa fa-s"></i>
                 <div class="data">
-                    <p>نقطة سيرياتيل</p>
+                    <p><a href="syr.php">نقطة سيرياتيل</a></p>
                 </div>
             </div>
             <div class="box">

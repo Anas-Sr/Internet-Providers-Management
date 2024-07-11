@@ -194,7 +194,7 @@ body.menu-shown .title-info {
 .data-info .box:hover{
     background: whitesmoke;
     color: white;
-    transform: scale(1.04);
+    transform: scale(1.02);
 }
 .data-info .box i{
     font-size: 40px;

@@ -6,14 +6,14 @@
         <ul>
             <li class="profile">
                 <div>
-                    <i class="fa fa-user-circle" aria-hidden="true" style="font-size: 50px; color: black;"></i>
+                    <i class="fa fa-user-circle" aria-hidden="true" style="font-size: 40px; color: black; margin-right: 30%; margin-bottom: 30%;"></i>
                 </div>
                 <h2><?php echo $_SESSION['fullname']; ?><br>
-                    <span><?php echo $_SESSION['u_email']."<br>"; ?></span>
+                    <span><?php echo $_SESSION['u_email']; ?></span>
                     <span style="color: black; font-size:18px;">
                             <?php
                                 $a = date("h");
-                                $b = $a + 2 ;
+                                $b = $a + 1 ;
                                 echo "<br>".date("$b:i:s")."&ensp;"."&ensp;".
                                 date("Y-m-d");
                             ?>
@@ -73,9 +73,10 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="syr.php">
                     <i class="fa fa-s"></i>
                     <p>نقطة سيرياتيل</p>
+                    <span style="margin-right: auto; color: white; font-weight: bolder; background-color: red; width: 30px; text-align:center; border-radius: 30%; font-size: 21px;"><?php if($r7 != 0){echo $r7.'+';} else{echo '';}?></span>
                 </a>
             </li>
             <li>
